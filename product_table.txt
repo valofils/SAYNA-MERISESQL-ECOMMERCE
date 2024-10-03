@@ -1,0 +1,36 @@
+CREATE TABLE product (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255),
+    description VARCHAR(255),
+    unit_price DECIMAL(10, 2),
+    category VARCHAR(255)
+);
+
+
+INSERT INTO product (name, description, unit_price, category) VALUES
+('Laptop Dell', 'High-performance laptop', 1299.99, 'Informatique'),
+('Smartphone Samsung Galaxy', 'Latest Samsung Galaxy model', 899.99, 'Téléphonie'),
+('Téléviseur LG 55 pouces', '4K Ultra HD Smart TV', 699.99, 'Électronique'),
+('Clavier mécanique', 'Mechanical keyboard with RGB lighting', 79.99, 'Informatique'),
+('Chaise de bureau ergonomique', 'Ergonomic office chair with lumbar support', 199.99, 'Mobilier'),
+('Casque Bluetooth Sony', 'Wireless noise-canceling headphones', 299.99, 'Audio'),
+('Console de jeux PlayStation 5', 'Latest PlayStation console', 499.99, 'Jeux vidéo'),
+('Appareil photo Canon EOS', 'DSLR camera with 24.1 MP', 799.99, 'Photographie'),
+('Réfrigérateur Samsung', 'Double door refrigerator with freezer', 999.99, 'Électroménager'),
+('Machine à laver LG', 'Front-load washing machine', 599.99, 'Électroménager'),
+('Table basse en bois', 'Coffee table made of solid oak', 149.99, 'Mobilier'),
+('Aspirateur Dyson', 'Cordless vacuum cleaner', 399.99, 'Électroménager'),
+('Four à micro-ondes Panasonic', 'Countertop microwave oven', 99.99, 'Électroménager'),
+('Enceinte portable JBL', 'Bluetooth speaker with powerful sound', 149.99, 'Audio'),
+('Tondeuse électrique', 'Electric lawn mower', 199.99, 'Jardinage'),
+('Grille-pain Philips', '2-slice toaster with browning control', 29.99, 'Électroménager'),
+('Ventilateur de plafond', 'Ceiling fan with LED light', 99.99, 'Électroménager'),
+('Tablette iPad Pro', 'Latest iPad Pro with 128GB storage', 999.99, 'Informatique'),
+('Imprimante HP LaserJet', 'Wireless monochrome laser printer', 249.99, 'Informatique'),
+('Caméra de sécurité', 'Wireless home security camera', 159.99, 'Sécurité');
+
+
+
+
+
+

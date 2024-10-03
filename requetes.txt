@@ -1,0 +1,62 @@
+
+#LISTES DES REQUÊTES SUR LA BASES DE DONNÉES “ECOMMERCE”
+-- Sélection de toutes les données d'une table
+SELECT * FROM customer;
+
+-- Sélection de données spécifiques d'une table
+SELECT id, firstname,lastname FROM customer;
+
+-- Sélection avec tri et limitation de résultats
+SELECT id, firstname,lastname FROM customer
+ORDER BY firstname,lastname
+LIMIT 3;
+
+-- Recherche avec une condition
+SELECT id, firstname,lastname FROM customer
+WHERE city='Antananarivo';
+
+-- Utilisation de fonctions d'agrégation (somme, moyenne, comptage)
+SELECT AVG(item_count) AS moyenne, SUM(item_count) AS somme, COUNT(*) AS comptage
+FROM orders;
+
+
+-- Jointure de deux tables
+SELECT * FROM customer c JOIN orders o ON c.id=o.customer_id;
+
+-- Groupement de données avec agrégation
+SELECT country, AVG(item_count) AS moyenne, SUM(item_count) AS somme, COUNT(*) AS comptage
+FROM customer c JOIN orders o ON c.id=o.customer_id
+GROUP BY country;
+
+
+-- Mise à jour de données dans une table
+UPDATE customer
+SET lastname = 'David'
+WHERE id=1;
+
+
+-- Insertion de nouvelles données dans une table
+INSERT INTO customer (firstname, lastname, city, street, email, phone_number, postal_code, country)
+VALUES
+    ('Fatou', 'Diop', 'Dakar', 'Rue de la Mer', 'fatou.diop@example.com', '221-777-123456', 'BP 5000', 'Sénégal'),
+    ('Ahmed', 'Hassan', 'Cairo', 'Tahrir Square', 'ahmed.hassan@example.com', '20-2-12345678', '11511', 'Égypte'),
+    ('Mary', 'Johnson', 'London', '221B Baker Street', 'mary.johnson@example.com', '44-20-7946-0958', 'NW1', 'Royaume-Uni'),
+    ('Li', 'Wang', 'Beijing', 'Chang Avenue', 'li.wang@example.com', '86-10-88888888', '100000', 'Chine'),
+    ('Carlos', 'Sanchez', 'Madrid', 'Gran Vía', 'carlos.sanchez@example.com', '34-91-1234567', '28013', 'Espagne'),
+    ('Aiko', 'Tanaka', 'Tokyo', 'Shibuya Crossing', 'aiko.tanaka@example.com', '81-3-1234-5678', '150-0002', 'Japon'),
+    ('Lars', 'Johansson', 'Stockholm', 'Drottninggatan', 'lars.johansson@example.com', '46-8-123456', '111 51', 'Suède'),
+    ('Maria', 'Rossi', 'Rome', 'Via del Corso', 'maria.rossi@example.com', '39-06-87654321', '00186', 'Italie'),
+    ('Ananya', 'Sharma', 'Mumbai', 'Marine Drive', 'ananya.sharma@example.com', '91-22-23456789', '400020', 'Inde'),
+    ('Oliver', 'Smith', 'Sydney', 'George Street', 'oliver.smith@example.com', '61-2-1234-5678', '2000', 'Australie');
+
+
+-- Suppression de données dans une table
+
+DELETE FROM order_product
+WHERE id=13;
+
+
+
+
+
+

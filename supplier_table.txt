@@ -1,0 +1,29 @@
+
+CREATE TABLE supplier (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255),
+    city VARCHAR(255),
+    street VARCHAR(255),
+    email VARCHAR(255) NOT NULL UNIQUE,
+    phone_number VARCHAR(255),
+    postal_code VARCHAR(255),
+    country VARCHAR(255)
+);
+
+
+INSERT INTO supplier (name, city, street, email, phone_number, postal_code, country) VALUES
+('Global Tech Supplies', 'Paris', '12 Avenue des Champs', 'contact@globaltech.com', '+33 1 23 45 67 89', '75008', 'France'),
+('Alpha Electronics', 'Berlin', '34 Hauptstraße', 'info@alphaelectronics.de', '+49 30 123 456', '10117', 'Allemagne'),
+('Innovatech Solutions', 'New York', '58 Broadway', 'sales@innovatech.us', '+1 212-555-1234', '10001', 'États-Unis'),
+('Green Valley Supplies', 'Tokyo', '23 Shibuya Street', 'support@greenvalley.co.jp', '+81 3-1234-5678', '150-0001', 'Japon'),
+('Horizon Industries', 'Londres', '44 Oxford Street', 'contact@horizonindustries.co.uk', '+44 20 7946 0958', 'W1D 1BS', 'Royaume-Uni'),
+('Omega Supply Chain', 'Sydney', '75 George Street', 'admin@omegasupply.com.au', '+61 2 9876 5432', '2000', 'Australie'),
+('TechSphere Supplies', 'Madrid', '15 Gran Vía', 'support@techsphere.es', '+34 91 123 4567', '28013', 'Espagne'),
+('Silicon Valley Resources', 'San Francisco', '450 Market Street', 'info@siliconvalley.com', '+1 415-555-9876', '94103', 'États-Unis'),
+('Nordic Supply', 'Stockholm', '28 Drottninggatan', 'contact@nordicsupply.se', '+46 8 123 456', '11151', 'Suède'),
+('Eastern Tech Distribution', 'Pékin', '99 Changan Avenue', 'info@easterntech.cn', '+86 10 1234 5678', '100020', 'Chine');
+
+
+
+
+

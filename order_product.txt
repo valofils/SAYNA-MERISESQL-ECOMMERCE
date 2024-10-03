@@ -1,0 +1,37 @@
+
+CREATE TABLE order_product (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    order_id INT,
+  	product_id INT,
+    FOREIGN KEY (order_id) REFERENCES orders(id),
+  	FOREIGN KEY (product_id) REFERENCES product(id)
+);
+
+
+INSERT INTO order_product (order_id, product_id)
+VALUES
+    (1, 1), -- Order 1, Product 1 (Laptop Dell)
+    (1, 3), -- Order 1, Product 3 (Téléviseur LG 55 pouces)
+    (2, 2), -- Order 2, Product 2 (Smartphone Samsung Galaxy)
+    (2, 5), -- Order 2, Product 5 (Chaise de bureau ergonomique)
+    (3, 4), -- Order 3, Product 4 (Clavier mécanique)
+    (3, 6), -- Order 3, Product 6 (Casque Bluetooth Sony)
+    (4, 7), -- Order 4, Product 7 (Console de jeux PlayStation 5)
+    (5, 8), -- Order 5, Product 8 (Appareil photo Canon EOS)
+    (5, 9), -- Order 5, Product 9 (Réfrigérateur Samsung)
+    (6, 10), -- Order 6, Product 10 (Machine à laver LG)
+    (7, 11), -- Order 7, Product 11 (Table basse en bois)
+    (8, 12), -- Order 8, Product 12 (Aspirateur Dyson)
+    (9, 13), -- Order 9, Product 13 (Four à micro-ondes Panasonic)
+    (10, 14), -- Order 10, Product 14 (Enceinte portable JBL)
+    (10, 15), -- Order 10, Product 15 (Tondeuse électrique)
+    (11, 16), -- Order 11, Product 16 (Grille-pain Philips)
+    (12, 17), -- Order 12, Product 17 (Ventilateur de plafond)
+    (13, 18), -- Order 13, Product 18 (Tablette iPad Pro)
+    (14, 19), -- Order 14, Product 19 (Imprimante HP LaserJet)
+    (15, 20); -- Order 15, Product 20 (Caméra de sécurité)
+
+
+
+
+

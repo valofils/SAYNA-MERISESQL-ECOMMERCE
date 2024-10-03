@@ -1,0 +1,37 @@
+
+CREATE TABLE supplier_product (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    supplier_id INT,
+  	product_id INT,
+    FOREIGN KEY (supplier_id) REFERENCES supplier(id),
+  	FOREIGN KEY (product_id) REFERENCES product(id)
+);
+
+INSERT INTO supplier_product (supplier_id, product_id)
+VALUES
+    (1, 1),  -- Supplier 1 fournit Product 1 (Laptop Dell)
+    (1, 2),  -- Supplier 1 fournit Product 2 (Smartphone Samsung Galaxy)
+    (2, 3),  -- Supplier 2 fournit Product 3 (Téléviseur LG 55 pouces)
+    (2, 4),  -- Supplier 2 fournit Product 4 (Clavier mécanique)
+    (3, 5),  -- Supplier 3 fournit Product 5 (Chaise de bureau ergonomique)
+    (3, 6),  -- Supplier 3 fournit Product 6 (Casque Bluetooth Sony)
+    (4, 7),  -- Supplier 4 fournit Product 7 (Console de jeux PlayStation 5)
+    (4, 8),  -- Supplier 4 fournit Product 8 (Appareil photo Canon EOS)
+    (5, 9),  -- Supplier 5 fournit Product 9 (Réfrigérateur Samsung)
+    (5, 10), -- Supplier 5 fournit Product 10 (Machine à laver LG)
+    (6, 11), -- Supplier 6 fournit Product 11 (Table basse en bois)
+    (6, 12), -- Supplier 6 fournit Product 12 (Aspirateur Dyson)
+    (7, 13), -- Supplier 7 fournit Product 13 (Four à micro-ondes Panasonic)
+    (7, 14), -- Supplier 7 fournit Product 14 (Enceinte portable JBL)
+    (8, 15), -- Supplier 8 fournit Product 15 (Tondeuse électrique)
+    (8, 16), -- Supplier 8 fournit Product 16 (Grille-pain Philips)
+    (9, 17), -- Supplier 9 fournit Product 17 (Ventilateur de plafond)
+    (9, 18), -- Supplier 9 fournit Product 18 (Tablette iPad Pro)
+    (10, 19), -- Supplier 10 fournit Product 19 (Imprimante HP LaserJet)
+    (10, 20); -- Supplier 10 fournit Product 20 (Caméra de sécurité)
+
+
+
+
+
+
